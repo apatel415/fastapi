@@ -8,7 +8,6 @@ from app import schemas
 def test_root(client):
     res = client.get('/')
     print(res.json())
-    assert res.json().get('message') == 'Welcome To My Api!!'
     assert res.status_code == 200
 
 def test_create_user(client):
